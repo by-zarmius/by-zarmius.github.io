@@ -1,0 +1,475 @@
+@import vars
+@import fonts
+@import libs
+@import animation
+@import media
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	color: $text
+	box-sizing: border-box
+
+
+header
+	background: url('../img/bg_header.png')
+	background-repeat: no-repeat
+	background-size: cover
+	height: 845px
+	color: white
+	.header_menu
+		background: #15263e
+		position: fixed
+		width: 100%
+		z-index: 9999
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+
+		.navbar
+			justify-content: end
+			padding: 20px 0
+
+		.navbar-dark .navbar-toggler-icon
+			background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+
+		.navbar-dark .navbar-toggler
+			border-color: rgba(255,255,255,.5)
+
+		#navbarNav
+			display: flex
+			justify-content: space-around
+
+		.my_menu
+			text-transform: uppercase
+			width: 100%
+			display: flex
+			align-items: center
+			font:
+				family: 'AvantGarde Demi'
+				weight: 100
+
+			.nav-link, li
+				color: white !important
+
+			.nav-link
+				padding: 5px 15px
+
+			.nav-link:hover
+				outline: 3px solid silver
+				transition: all 0.1s
+
+			.li_sep
+				align-self: center
+	.header_content
+		text-transform: uppercase
+		font-family: 'AvantGarde Demi'
+
+		height: 90%
+		display: flex
+		justify-content: center
+		align-items: center
+		
+		.header_text
+			text-align: center
+
+		p
+			margin: 0
+			padding: 0
+
+		.header_name
+			font-size: 120px
+			font-stretch: ultra-expanded
+			background: linear-gradient(45deg, #a21af0 50%, #ff0072)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			color: #0B2349
+			display: table
+			margin: -40px auto -80px auto
+
+		.header_surname
+			font-size: 110px
+			margin-top: -40px !important
+			margin-bottom: -40px
+
+		.header_about_me
+			font-size: 25px
+		.header_i_am
+			font-size: 25px
+
+			animation-duration: 1s
+			animation-name: full_name
+			animation-delay: 1s
+			animation-iteration-count: infinite
+
+.about_me
+	background: #e9e9e9 !important
+	font-family: 'AvantGarde Demi', sans-serif
+	padding-top: 35px
+
+	.about_me_img
+		display: flex
+		justify-content: center
+
+		img
+			height: 550px
+
+	.row
+		display: flex
+		align-items: center
+
+	.about_me_right_text
+		text-align: right
+
+	.about_me_name
+		color: #15263e !important
+		font-size: 35px
+
+	.about_me_job
+		color: #a21af0
+		margin-top: -20px
+		text-align: right
+
+	.about_me_text
+		margin-top: 25px
+		font-family: 'AvantGarde Book'
+		color: #494949
+
+	.progress_str
+		height: 12px
+		width: 100%
+		border-radius: 5px
+
+	.prog-1
+		background: linear-gradient(90deg, #b218eb 70%, #f8027e 74%, #f8027e)
+
+	.prog-2
+		background: linear-gradient(90deg, #b218eb 80%, #f8027e 84%, #f8027e)
+
+	.prog-3
+		background: linear-gradient(90deg, #b218eb 65%, #f8027e 69%, #f8027e)
+
+	.prog-4
+		background: linear-gradient(90deg, #b218eb 90%, #f8027e 94%, #f8027e)
+
+	.my_progress
+		margin-bottom: 20px
+		max-width: 380px
+	.progress__wrapper
+		display: flex
+		justify-content: center
+	.progress__content
+		max-width: 380px
+
+
+
+
+.mini_contacts
+	background: #dcdcde
+	padding: 40px 0
+	display: flex
+	align-items: center
+	font-family: 'AvantGarde Book'
+
+	.mini_c_title
+		font-family: 'AvantGarde Demi', sans-serif
+		margin-bottom: 8px !important
+
+	.mini_c_my_row:hover .mini_c_title::after
+		content: "..."
+
+	.mini_c_align_center
+		font-size: 25px
+		color: white
+		display: flex
+		align-items: center
+
+		.mini_c_icon
+			min-height: 60px
+			min-width: 60px
+			background: #374362
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+
+	p
+		margin: 0 !important
+
+.our_services
+	padding-top: 90px
+	.our_s_header
+		h2
+			font-family: 'AvantGarde Demi', sans-serif
+			font-size: 40px
+			color: #15263e
+			text-transform: uppercase
+
+		p
+			font-family: 'AvantGarde Book', sans-serif
+			margin-bottom: 70px
+
+	.our_s_block
+		text-align: center
+		font-family: 'AvantGarde Book', sans-serif
+		color: #494949
+		margin-bottom: 50px
+		padding-top: 20px
+
+		&:hover .our_s_icon
+			background: linear-gradient(45deg, #f8027e 50%, #b218eb)
+
+		.our_s_icon
+			height: 80px
+			width: 80px
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+			background: linear-gradient(45deg, #b218eb 50%, #f8027e)
+			margin: 0 auto
+			margin-bottom: 20px
+			color: white
+			font-size: 30px
+
+		.our_s_title
+			font-family: 'AvantGarde Demi', sans-serif
+			text-transform: uppercase
+			font-size: 18px
+
+.contact_us
+	background: url('../img/bg_footer.png')
+	background-repeat: no-repeat
+	background-size: cover
+	height: 775px
+	display: flex
+	align-items: center
+	justify-content: center
+
+	.container
+		height: 80%
+		background: #15263e
+		color: white
+		padding: 50px 80px 50px 80px
+		display: flex
+		justify-content: center
+		flex-direction: column
+
+
+
+		.contact_us_header
+			text-align: center
+
+			h2
+				font-size: 40px
+
+		.contact_us_form
+			input
+				margin-top: 50px
+				width: 100%
+				margin-bottom: 15px
+				padding: 5px
+				border: none
+				border-radius: 3px
+
+			textarea
+				resize: none
+				width: 100%
+				height: 100px
+				padding: 10px
+				border: none
+				border-radius: 3px
+
+			button
+				margin-top: 30px
+				background: linear-gradient(45deg, #b218eb 50%, #f8027e)
+				color: white
+				border-radius: 0px
+				text-transform: uppercase
+				padding: 15px 30px
+				font-family: 'AvantGarde Demi', sans-serif
+				&:hover
+					background: linear-gradient(45deg, #f8027e 50%, #b218eb)
+
+.portfolio .portfolio_block:hover .portfolio_work 
+	opacity: 1
+	transition: all 0.3s
+
+.portfolio
+	margin-top: 65px
+	margin-bottom: 40px
+
+
+	.portfolio_header
+		h2, p
+			text-align: center
+
+		h2
+			font-family: 'AvantGarde Demi', sans-serif
+			font-size: 40px
+			color: #15263e
+			text-transform: uppercase
+
+		p
+			margin-bottom: 40px
+			font-family: 'AvantGarde Book', sans-serif
+			font-size: 18px
+	.portfolio_works
+		display: flex
+		justify-content: space-around
+
+	.portfolio_block
+		margin-bottom: 40px
+
+		img
+			width: 470px
+			height: 300px
+			outline: 3px double silver
+
+		.portfolio_work
+			background: rgba(21, 38, 72, 0.6)
+			position: absolute
+			top: 0px
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 300px
+			width: 470px
+			opacity: 0
+
+			a
+				padding: 8px 16px
+				background: linear-gradient(45deg, #b218eb 50%, #f8027e)
+				color: white
+				border-radius: 4px
+				&:hover
+					background: linear-gradient(45deg, #f8027e 50%, #b218eb)
+					text-decoration: none
+
+
+
+.comments
+	padding: 50px 0
+	background: url('../img/bg_testimonials.png')
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	align-items: center
+	justify-content: center
+	color: white
+	margin-top: 30px
+
+	.comments_content
+		display: flex
+	
+	h2
+		margin-top: 112px
+		width: 470px
+	hr
+		width: 580px
+
+	.comments_header
+		display: flex
+		align-items: center
+		text-align: center
+		order: 2
+
+		img
+			width: 130px
+			height: 130px
+			border-radius: 50%
+			align-self: center
+			border: 3px solid silver
+			margin-right: 10px
+
+		.comments_name
+			max-width: 170px
+			margin-bottom: -3px
+			font-weight: bold
+			font-size: 25px
+			font-family: 'AvantGarde Demi', sans-serif
+
+
+	.comments_text
+		margin-top: 100px
+		margin-bottom: 75px
+		line-height: 34px
+		text-align: right
+		order: 1
+		font:
+			size: 18px
+		
+		i
+			position: absolute
+			top: -20px
+			left: -30px
+			font-size: 45px
+			color: rgba(0,0,0, 0.4)
+
+	.carousel-indicators
+		li
+			height: 10px
+			width: 10px
+			border-radius: 50%
+			background: #1ab798
+			border: none
+			margin: 0 5px
+
+.carousel-control-prev
+	left: -50px !important
+
+.carousel-control-next
+	right: -50px !important
+
+
+footer
+	height: 100px
+	display: flex
+	align-items: center
+	justify-content: center
+	background: linear-gradient(90deg, #15263E, white 20%, white 80%, #15263E)
+	&:hover
+		background: linear-gradient(90deg, white, #15263E 20%, #15263E 80%, white)
+		color: white
+	p
+		font-size: 16px
+		font-family: 'AvantGarde Demi', sans-serif
+		text-transform: uppercase
+		margin: 0
+		padding: 0
+
+.portfolio_work
+
+.mini_c_my_row:hover
+	animation: mini_contacts 0.4s
+	animation-fill-mode: forwards
+	transition: transform 0.3s 0.3s
+
+
+.our_s_block:hover
+	transform: scale(1.06)
+	transition: all 0.5s
+
+.our_s_block:hover:nth-child(even) .our_s_icon
+	transform: rotate(360deg)
+	transition: all 0.5s
+
+.our_s_block:hover:nth-child(odd) .our_s_icon
+	transform: rotate(-360deg)
+	transition: all 0.5s

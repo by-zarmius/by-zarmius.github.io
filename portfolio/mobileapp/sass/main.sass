@@ -1,0 +1,516 @@
+@import vars
+@import fonts
+@import libs
+@import media
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Open Sans', sans-serif
+	overflow-x: hidden
+	color: $text
+
+.container
+	max-width: 1200px
+
+.col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto
+	padding-left: 25px
+	padding-right: 25px
+
+
+header
+	background:
+		image: url('../img/bg_header.png')
+		repeat: no-repeat
+		size: cover
+	padding-top: 30px
+	height: 750px
+
+	.container nav
+		border-radius: 2px
+		font-family: 'OpenSans', sans-serif
+		text-transform: uppercase
+		font-weight: bold
+		height: 80px
+		font-size: 14px
+
+		.navbar-brand
+			color: $logo
+			font: 
+				size: 28px
+				family: 'Raleway', sans-serif
+				weight: 600
+				text-transform: none !important
+
+			&:hover
+				color: $logo
+
+		.navbar-nav .nav-item .nav-link:not(.first-child)
+			margin-left: 14px
+
+		.navbar-nav .nav-item:not(.active) .nav-link
+			color: $menu
+			&:hover
+				color: $text
+
+		.navbar-nav .active
+			color: $text
+
+	.header_content
+		color: $header
+
+		p, h1
+			font:
+				family: 'Raleway', sans-serif;
+				weight: 600
+
+		p
+			font-size: 22px
+			margin-top: 0
+			font-weight: normal !important
+
+		h1
+			font-size: 41px
+			margin-bottom: -10px
+
+		ul
+			list-style-type: none
+			font-family: 'Open Sans', sans-serif;
+			line-height: 35px
+			margin-top: 50px
+			margin-bottom: 50px
+			padding-left: 0
+
+		button
+			display: flex
+			font-size: 22px
+			background: #17d0ac
+			color: white
+			line-height: 47px
+			padding: 6px 32px
+
+			i
+				font-size: 34px
+
+			&:hover
+				background: white
+				color: #17d0ac
+				transition: all 0.2s
+
+
+	.header_img
+		position: relative
+		top: 110px
+		left: -30px
+
+	.header_container_nav
+		max-width: 1255px
+
+
+.headline_h2
+	text-align: center
+	width: 237px
+	background: white
+	margin: 0 auto
+	color: $h2
+	text-transform: uppercase
+	font: 
+		family: 'Raleway', sans-serif
+		weight: 600
+		size: 30px
+
+.headline_hr
+	width: 350px
+	border: none
+	border-top: 1px solid #babdc1
+	margin: 0 auto
+	padding: 0
+	position: relative
+	top: -20px
+	z-index: -100
+
+.headline_under
+	margin-top: -2px
+
+.headline_description
+	margin-top: 50px
+	margin-bottom: 60px
+	line-height: 37px
+	font-size: 18px
+
+.key_features
+	padding-top: 120px
+	
+	.block
+		display: flex
+		margin-bottom: 100px
+
+	.key_content
+		font-size: 13px
+		
+		h3
+			font:
+				family: 'Raleway', sans-serif
+				size: 18px
+				weight: bold
+
+		.key_icon
+			font-size: 35px
+			padding: 0
+			color: $h2
+
+	img
+		display: flex !important
+		margin: 0 auto !important
+
+.video
+	background: #31d4e7
+	height: 450px
+	display: flex
+	align-items: center
+	margin-top: 50px
+
+	h2
+		margin-bottom: 20px
+		text-transform: uppercase
+		font: 
+			family: 'Raleway', sans-serif
+			weight: bold
+			size: 28px
+
+	p
+		color: white 
+		font-size: 15px
+		line-height: 30px
+
+	.video_frame
+		display: flex
+		align-items: center
+		margin-right: 0 !important
+
+	iframe
+		border-radius: 10px
+
+	.video_a
+		display: inline-block
+		margin-right: 20px
+
+	a
+		display: flex
+		margin: 0
+		justify-content: center
+		align-items: center
+		width: 70px
+		height: 70px
+		border-radius: 50%
+		text-align: center
+		color: white
+		font-size: 30px
+
+	.video_apple
+		background: #282828
+		&:hover
+			background: white
+			color: #282828
+			transition: all 0.2s
+
+	.video_android
+		background: #a4c639
+		&:hover
+			background: white
+			color: #a4c639
+			transition: all 0.2s
+
+	.video_windows
+		background: #345088
+		&:hover
+			background: white
+			color: #345088
+			transition: all 0.2s
+
+.our_team
+	padding-top: 83px
+
+	p:first-child
+		font-weight: normal
+
+	.headline_description
+		margin-top: 30px
+		line-height: 25px
+		font-weight: 600
+		font-size: 18px
+
+	.persons
+		margin-top: 25px
+
+	.person
+		display: flex
+		align-items: center
+		flex-direction: column
+
+	.person_name
+		margin-top: 12px
+		margin-bottom: 2px
+		font: 
+			weight: bold
+			size: 18px
+
+	.person_job
+		font-size: 14px
+
+	.person:hover
+		.person_name
+			color: $h2
+		.person_hover
+			display: block
+			transition: display 0.5s
+
+	.person_hover
+		display: none
+		width: 270px
+		height: 300px
+		background: rgba(14, 180, 147, 0.5)
+		color: white
+		text-align: center
+		padding: 12px 15px
+		position: absolute
+		top: 0px
+
+		h3
+			font-size: 18px
+			font-weight: 600
+			margin-top: 10px
+			margin-bottom: 20px
+
+		p
+			font-size: 16px
+
+		.team_contacts
+			
+			.team_a
+				margin-top: 50px
+				display: inline-block
+				background: rgba(14, 180, 147, 0.8)
+				&:hover
+					transform: scale(1.2)
+					transition: all 0.2s
+			a
+				display: flex
+				width: 40px
+				height: 40px
+				color: white
+				
+footer
+	color: $footer
+	margin-top: 110px
+	padding-top: 60px
+	background: 
+		image: url(../img/bg_footer.png)
+		repeat: no-repeat
+		size: cover
+	
+	h3
+		font: 
+			family: 'Raleway', sans-serif
+			size: 23px
+		color: white
+
+	.footer_about
+		font-size: 14px
+		margin-top: -4px
+
+	.contact_info
+		color: $footer_contact
+		
+		p:first-child
+			margin-bottom: 0
+	
+	.footer_content
+		margin-top: 90px
+
+	.footer_contacts
+		margin-top: 35px
+		margin-bottom: 24px
+		.footer_a
+			display: inline-block
+		a
+			margin-right: 13px
+			display: flex
+			color: white
+			font-size: 18px
+			justify-content: center
+			align-items: center
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			
+		.footer_facebook
+			background: #3b5997
+			&:hover
+				color: #3b5997
+				background: white
+				transition: all 0.2s
+
+		.footer_twitter
+			background: #3ec2f3
+			&:hover
+				color: #3ec2f3
+				background: white
+				transition: all 0.2s
+
+		.footer_gplus
+			background: #e44c41
+			&:hover
+				color: #e44c41
+				background: white
+				transition: all 0.2s
+
+	.footer_f
+		margin-top: 75px
+		font-size: 14px
+		.footer_last
+			text-align: right
+
+	hr
+	    background: white
+	    width: 50000%
+	    position: relative
+	    top: 42px
+	    left: -1000%
+
+	.my_form
+		
+		input
+			float: right
+			width: 100%
+			height: 45px
+			border-radius: 5px
+			border: none
+			padding: 10px
+
+
+		textarea
+			resize: none
+			padding: 10px
+			margin-top: 30px
+			border-radius: 5px
+			float: right
+			width: 100%
+			min-height: 180px
+			max-height: 180px
+
+		button
+			font-weight: bold
+			float: right
+			margin-top: 30px
+			text-transform: uppercase
+			height: 50px
+			width: 170px
+			background: #31d4e7
+			&:hover
+				color: #31d4e7
+				background: white
+				transition: all 0.2s
+
+	.headline_h2
+		text-align: center
+		width: 339px
+		background: transparent
+		margin: 0 auto
+		color: white
+		&::before
+			content: '——'
+			font-family: 'Open Sans'
+			font-weight: 100
+			letter-spacing: -2px
+			position: relative
+			left: -25px
+
+		&::after
+			content: '——'
+			font-family: 'Open Sans'
+			font-weight: 100
+			letter-spacing: -2px
+			position: relative
+			left: 25px
+
+.comments
+	.comments_content
+		background: white
+	
+	h2
+		margin-top: 112px
+		width: 470px
+	hr
+		width: 580px
+	.comments_header
+		text-align: center
+		img
+			width: 100px
+			height: 100px
+			border-radius: 50%
+			align-self: center
+			margin-top: 30px
+			margin-bottom: 27px
+			border: 3px solid silver
+
+		.comments_name
+			margin-bottom: -3px
+			font-weight: bold
+
+		.comments_job
+			font-size: 13px
+
+	.comments_text
+		margin-top: 100px
+		margin-bottom: 75px
+		line-height: 34px
+		text-align: center
+		font:
+			size: 18px
+		
+		i
+			position: absolute
+			top: -20px
+			left: -30px
+			font-size: 45px
+			color: rgba(0,0,0, 0.4)
+
+	.carousel-indicators
+		li
+			height: 10px
+			width: 10px
+			border-radius: 50%
+			background: #1ab798
+			border: none
+			margin: 0 5px
+
+.carousel-control-prev-icon
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important
+
+.carousel-control-next-icon
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important
+
+.carousel-control-prev
+	left: -40px
+
+.carousel-control-next
+	right: -40px
+
+
