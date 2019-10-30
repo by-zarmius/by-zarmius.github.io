@@ -18,4 +18,9 @@ $phone = trim($phone);
 $email = trim($email);
 $text = trim($text);
 
-echo $name;
+if (mail("zhurbiym@gmail.com", "Заказ с сайта", "ФИО:".$name.". E-mail: ".$email ,"From: $email \r\n"))
+ {
+    echo "сообщение успешно отправлено";
+} else {
+    echo "при отправке сообщения возникли ошибки";
+}
