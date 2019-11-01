@@ -31,6 +31,18 @@ body
 	color: $text
 	box-sizing: border-box
 
+#toTop
+	opacity: 0.9
+	width: 70px
+	position: fixed
+	bottom: 15px
+	right: 15px
+	cursor: pointer
+	// display: none
+	img
+		width: 70px
+		height: 70px
+		opacity: 0.9
 
 header
 	background: url('../img/bg_header.png')
@@ -221,7 +233,10 @@ header
 			align-items: center
 
 	p
-		margin: 0 !important
+		margin: 0
+
+	.mini_c_href
+		color: #494949
 
 .our_services
 	padding-top: 90px
@@ -455,10 +470,7 @@ footer
 	display: flex
 	align-items: center
 	justify-content: center
-	background: linear-gradient(90deg, #15263E, white 20%, white 80%, #15263E)
-	&:hover
-		background: linear-gradient(90deg, white, #15263E 20%, #15263E 80%, white)
-		color: white
+	background: white
 	p
 		font-size: 16px
 		font-family: 'AvantGarde Demi', sans-serif

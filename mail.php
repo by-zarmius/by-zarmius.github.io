@@ -17,7 +17,7 @@ $mail->SMTPAuth = true;                               // Enable SMTP authenticat
 $mail->Username = 'zmisha.portfolio@gmail.com'; // Ваш логин от почты с которой будут отправляться письма
 $mail->Password = '$ig43sjg4lsT'; // Ваш пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587; // TCP port to connect to / этот порт может отличаться у других провайдеров
+$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('zmisha.portfolio@gmail.com'); // от кого будет уходить письмо?
 $mail->addAddress('zhurbiym@gmail.com');     // Кому будет уходить письмо 
@@ -29,8 +29,8 @@ $mail->addAddress('zhurbiym@gmail.com');     // Кому будет уходит
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заявка с тестового сайта';
-$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. ' Почта этого пользователя: ' .$email. '<br> Текст его сообщения: <br>' .$text;
+$mail->Subject = 'Заявка с сайта портфолио';
+$mail->Body    = '' .$name . ', оставил(а) заявку, телефон пользователя: ' .$phone. '. <br>Почта этого пользователя: ' .$email. '<br><br> Текст сообщения: <br>' .$text;
 $mail->AltBody = '';
 
 if(!$mail->send()) {

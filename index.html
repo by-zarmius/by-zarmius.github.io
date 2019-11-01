@@ -17,7 +17,8 @@
 </head>
 
 <body>
-
+	
+	<a name="top"></a>
     <header class="wow fadeInUp">
     	<div class="header_menu">
     		<div class="container">
@@ -29,6 +30,10 @@
 				    	<ul class="navbar-nav my_menu my_navbar justify-content-around">
 				    		<li class="nav-item">
 				    			<a class="nav-link" href="#about_me">О мне</a>
+				    		</li>
+				    		<li class="li_sep"><span class="sep">-</span></li>
+				    		<li class="nav-item">
+				    			<a class="nav-link" href="#tell_me">Контакты</a>
 				    		</li>
 				    		<li class="li_sep"><span class="sep">-</span></li>
 				    		<li class="nav-item">
@@ -120,6 +125,7 @@
     	</div>
     </section>
 
+	<a name="tell_me"></a>
     <section class="mini_contacts wow fadeInUp">
     	<div class="container">
     		<div class="row">
@@ -130,7 +136,7 @@
     					</div>
     					<div class="col-lg-9 col-md-12">
     						<p class="mini_c_title">Номер Телефона</p>
-    						<p>+38(068)-454-10-29</p>
+    						<p><a href="tel:+380684541029" class="mini_c_href">+38(068)-454-10-29</a></p>
     					</div>
     				</div>
     			</div>
@@ -141,7 +147,7 @@
     					</div>
     					<div class="col-lg-9 col-md-12">
     						<p class="mini_c_title">Мессенджеры</p>
-    						<p>Телеграм - @zhurbiy_m</p>
+    						<p><a href="https://teleg.run/zhurbiy_m" class="mini_c_href" target="_blank">Телеграм - @zhurbiy_m</a></p>
     					</div>
     				</div>
     			</div>
@@ -152,7 +158,7 @@
     					</div>
     					<div class="col-lg-9 col-md-12">
     						<p class="mini_c_title">EMAIL</p>
-    						<p>zhurbiym@gmail.com</p>
+    						<p><a href="mailto:zhurbiym@gmail.com?subject=Предложение%20работы&body=Тип%20проекта:%20%0AСроки:%20%0AСтоимость:%20%0AОписание:%20" class="mini_c_href" class="mini_c_href">zhurbiym@gmail.com</a></p>
     					</div>
     				</div>
     			</div>
@@ -310,7 +316,7 @@
 						</div>
 					</div>
 					<div class="col-md-6 portfolio_block">
-						<a href="portfolio/biziness/index.html"><img src="img/portfolio/img_2.jpg"></a>
+						<a href="portfolio/biziness/index.html"><img src="img/portfolio/img_2.png"></a>
 						<div class="portfolio_work">
 							<a href="portfolio/biziness/index.html" target="_blank">Просмотреть</a>
 						</div>
@@ -349,13 +355,15 @@
 		</div>
 	</div>
 	
+	<div id="toTop"><a href="#top"><img src="img/up.png" alt=""></a></div>
+
 	<a name="contacts"></a>
     <section class="contact_us wow fadeInUp">
     	<div class="container">
     		<div class="row contact_us_header">
     			<div class="col">
     				<h2 class="contact_us_title">Свяжитесь со мной</h2>
-    				<p class="contact_us_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quae, repellat similique?</p>
+    				<p class="contact_us_text">У вас есть проект, который нужно выполнить? Напишите мне об этом, и я свяжусь с вами!</p>
     			</div>
     			
     		</div>
@@ -382,6 +390,7 @@
     
 	<!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<!-- Popper.js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.min.js"></script>
 	<!-- Bootstrap -->
@@ -393,6 +402,9 @@
 	<script>
 		new WOW().init();
 	</script>
+
+
+
 
 </body>
 </html>
